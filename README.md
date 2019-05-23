@@ -19,7 +19,7 @@ This is based on the PluralSight course "Angular: Getting Started" by Deborah Ku
 
 
 
-## Vocublary
+## Vocabulary
 #### Decorator
 * A function that adds **metadata** to a class, its members, or its method arguments. (selector, template, etc.)
 * A JavaScript language feature that is implemented in TypeScript.
