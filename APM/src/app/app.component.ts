@@ -1,11 +1,13 @@
 import { Component } from "@angular/core";
 
+// This using an inline template versus a linked template (html is referenced in a different file)
+
 @Component({
   selector: 'pm-root',
   template: `
     <div>
       <h1>{{pageTitle}}</h1>
-      <div>My First Component</div>
+      <pm-products></pm-products>
     </div>
     `
 })

@@ -27,9 +27,24 @@ This is based on the PluralSight course "Angular: Getting Started" by Deborah Ku
 
 #### Directive
 * A custom HTML tag which is defined in the selector and rendered in an HTML file or template.
+* A **Structural Directive** is a special Angular HTML attribute such as `*ngIf` or `*ngFor` which can manipulate the DOM based on the attribute text.  These are exposed by the BrowserModule.
+
+#### Interpolation
+* Using the curly braces `{{ comp.value }}`, a component can set up a one-way (*readonly*) binding to its HTML template (view).
+
+#### Property Binding
+* Using the square brackets `[]`, an HTML element's attribute can be bound to a component's property. `<img [src]='comp.imageUrl'>`
+* `[src]` is the binding **Target**
+* `'comp.imageUrl'` is the binding **Source**
 
 #### Selector
 * An attribute of a decorator which is a unique key for Angular to render this component when used in HTML.
+
+## ES2015
+* for...of - iterates over the objects in the list or array of objects.
+* versus
+* for...in - interates over the properties of an object (an array has indexes)
+
 
 ## Reference
 https://www.typescriptlang.org/play/
