@@ -30,6 +30,10 @@ This is based on the PluralSight course "Angular: Getting Started" by Deborah Ku
 * A function that adds **metadata** to a class, its members, or its method arguments. (selector, template, etc.)
 * A JavaScript language feature that is implemented in TypeScript.
 * Always prefixed with an `@` sign
+    * @Component()
+    * @Input()
+    * @Output()
+    * @Pipe()
 
 #### Directive
 * A custom HTML tag which is defined in the selector and rendered in an HTML file or template.
