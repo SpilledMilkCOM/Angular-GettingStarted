@@ -18,6 +18,12 @@ This is based on the PluralSight course "Angular: Getting Started" by Deborah Ku
 * Promote **application** boundaries
 
 
+## Lifecycle Hooks
+* `OnInit`: Perform component initialization, retrieve data
+* `OnChanges`: Perform action after change to input properties
+* `OnDestroy`: Perform cleanup
+* [There are others...](https://angular.io/guide/lifecycle-hooks)
+
 
 ## Vocublary
 #### Decorator
@@ -53,6 +59,7 @@ This is based on the PluralSight course "Angular: Getting Started" by Deborah Ku
 * Using a pipe symbol `'|'`, bound properties can be formatted using built-in or custom pipes.
 * Pipes can be chained together `{{ comp.price | currency | lowercase }}`
 * Pipes may have paramters  `{{ comp.price | currency:'USD':'symbol':'1.2-2' }}`
+* Use the `@Pipe({})` decorator to create custom pipes.
 
 #### Selector
 * An attribute of a decorator which is a unique key for Angular to render this component when used in HTML.
