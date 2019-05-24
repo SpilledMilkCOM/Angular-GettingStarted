@@ -31,6 +31,7 @@ This is based on the PluralSight course "Angular: Getting Started" by Deborah Ku
 * A JavaScript language feature that is implemented in TypeScript.
 * Always prefixed with an `@` sign
     * @Component()
+    * @Injectible()
     * @Input()
     * @Output()
     * @Pipe()
@@ -44,6 +45,9 @@ This is based on the PluralSight course "Angular: Getting Started" by Deborah Ku
 ##### Event Binding
 * Using parenthesis `( )`, events can be bound to component methods (*functions*).
 * `<button (click)='toggleImage()'>`
+
+##### Injector
+* What Angular uses for dependency injection for objects that require services.
 
 ##### Interpolation
 * Using the curly braces `{{ comp.value }}`, a component can set up a one-way (*readonly*) binding to its HTML template (view).
@@ -64,6 +68,13 @@ This is based on the PluralSight course "Angular: Getting Started" by Deborah Ku
 * Pipes can be chained together `{{ comp.price | currency | lowercase }}`
 * Pipes may have paramters  `{{ comp.price | currency:'USD':'symbol':'1.2-2' }}`
 * Use the `@Pipe({})` decorator to create custom pipes.
+
+#### Service
+* A class with a focused purpose
+* Used for features that:
+    * Are independent from any particular component
+    * Provide shared data or logic across components
+    * Encapsulate external interactions
 
 #### Selector
 * An attribute of a decorator which is a unique key for Angular to render this component when used in HTML.

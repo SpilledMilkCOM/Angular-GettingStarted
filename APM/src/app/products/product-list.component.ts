@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+
 import { IProduct } from './product';
+import { ProductService } from './product.service';
 
 // This uses a linked template in the relative path.
 
@@ -17,40 +19,23 @@ export class ProductListComponent
   _listFilter: string;     // The underscore '_' signifies that there are get/set methods. (initialized in the constructor)
   showImage: boolean = false;
 
-  filteredProducts: IProduct[];
-  products: IProduct[] = [
-    {
-      "productId": 2,
-      "productName": "Garden Cart",
-      "productCode": "GDN-0023",
-      "releaseDate": "March 18, 2016",
-      "description": "15 gallon capacity rolling garden cart",
-      "price": 32.99,
-      "starRating": 4.2,
-      "imageUrl": "https://openclipart.org/image/300px/svg_to_png/58471/garden_cart.png"
-    },
-    {
-      "productId": 5,
-      "productName": "Hammer",
-      "productCode": "TBX-0048",
-      "releaseDate": "May 21, 2016",
-      "description": "Curved claw steel hammer",
-      "price": 8.9,
-      "starRating": 4.8,
-      "imageUrl": "https://openclipart.org/image/300px/svg_to_png/73/rejon_Hammer.png"
-    }
-  ];
+  // productService: ProductService;   Is defined below in the short hand by adding 'private' to the constructor's injected paramenter.
 
-  constructor()
-  {
-    this.filteredProducts = this.products;
+  filteredProducts: IProduct[];
+  products: IProduct[] = [];
+
+  // Primarily used for initialization (very light weight code)
+  // The 'private' productService is also scoped to the class (this seems bad)
+  constructor(private productService: ProductService) {
     this.listFilter = 'cart';
+
+    // Don't load the products here because it COULD take too much time if a database or endpoint is hit.
   }
 
   // We could have done event binding, but using get/set is more straightforward
   get listFilter(): string {
     return this._listFilter;
-  } 
+  }
   set listFilter(value: string) {
     this._listFilter = value;
 
@@ -67,7 +52,7 @@ export class ProductListComponent
     // Use the built in 'filter' function of an array and the 'arrow' (anonymous delegate)
 
     return this.products.filter((product: IProduct) =>
-          product.productName.toLocaleLowerCase().indexOf(filterBy) !== -1);
+      product.productName.toLocaleLowerCase().indexOf(filterBy) !== -1);
   }
 
   toggleImage(): void {
@@ -76,5 +61,8 @@ export class ProductListComponent
 
   ngOnInit(): void {
     console.log('ngOnInit() - Start');
+
+    this.products = this.productService.getProducts();
+    this.filteredProducts = this.products;
   }
 }
