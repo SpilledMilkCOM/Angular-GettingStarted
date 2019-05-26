@@ -6,7 +6,7 @@ import { ProductService } from './product.service';
 // This uses a linked template in the relative path.
 
 @Component({
-  selector: 'pm-products',
+  // selector: 'pm-products',     The selector is no longer needed because the application is now routing to it versus a direct reference.
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })
