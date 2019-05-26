@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpClient } from '@angular/common/http'; // This was imported from selenium by default. 'selenium-webdriver/http';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -16,7 +17,8 @@ import { StarComponent } from './shared/start.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule     // Needed for ngModel
+    FormsModule,     // Needed for ngModel
+    HttpClient
   ],
   bootstrap: [
     AppComponent    // This is the starting component of the application.

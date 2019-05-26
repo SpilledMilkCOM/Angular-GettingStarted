@@ -84,6 +84,17 @@ This is based on the PluralSight course "Angular: Getting Started" by Deborah Ku
 * versus
 * for...in - interates over the properties of an object (an array has indexes)
 
+### Promise vs Observable
+* Promise provides a single future value
+    * Observable emits multiple values over time
+* Promise is NOT lazy
+    * Observable IS lazy
+* Promise is NOT cancellable
+    * Observable IS cancellable
+* Observable supports map, filter, reduce and similar operators
+
+#### Observable Operator
+* Each item is processed with the 'arrow' function **as** it is emitted.
 
 ## Reference
 https://www.typescriptlang.org/play/
