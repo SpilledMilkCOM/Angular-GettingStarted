@@ -13,6 +13,7 @@ import { ProductService } from './product.service';
 export class ProductListComponent
   implements OnInit {   // Since ES2015 doesn't support interfaces this will be transpiled out, but it is good TypeScript practice to keep it in.
 
+  errorMessage: string;
   pageTitle: string = 'Product List';
   imageWidth: number = 50;
   imageMargin: number = 2;
@@ -62,7 +63,13 @@ export class ProductListComponent
   ngOnInit(): void {
     console.log('ngOnInit() - Start');
 
-    this.products = this.productService.getProducts();
-    this.filteredProducts = this.products;
+    this.productService.getProducts().subscribe(
+      products => {
+        this.products = products;
+        this.filteredProducts = this.products;
+      },
+      error => this.errorMessage = <any>error
+    );
+    
   }
 }
