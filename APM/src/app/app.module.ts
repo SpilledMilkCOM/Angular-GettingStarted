@@ -1,12 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { HttpClient } from '@angular/common/http'; // This was imported from selenium by default. 'selenium-webdriver/http';
+
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ConvertToSpacesPipe } from './shared/convert-to-spaces.pipe';
 import { ProductListComponent } from './products/product-list.component';
 import { StarComponent } from './shared/start.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { StarComponent } from './shared/start.component';
   imports: [
     BrowserModule,
     FormsModule,     // Needed for ngModel
-    HttpClient
+    HttpClientModule
   ],
   bootstrap: [
     AppComponent    // This is the starting component of the application.

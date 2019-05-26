@@ -31,6 +31,8 @@ export class ProductListComponent
     this.listFilter = 'cart';
 
     // Don't load the products here because it COULD take too much time if a database or endpoint is hit.
+
+    this.filteredProducts = this.products;
   }
 
   // We could have done event binding, but using get/set is more straightforward
