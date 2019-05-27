@@ -63,6 +63,13 @@ This is based on the PluralSight course "Angular: Getting Started" by Deborah Ku
 * `<input [(ngModel)]='listFilter'>`
 * "Banana in a box"
 
+#### Guards
+* A technique when routing to protect a route from access.
+    * `CanActivate` - Guard navigation **to** a route.
+    * `CanDeactivate` - Guard navigation **from** a route.
+    * `Resolve` - Pre-fetch data before activating a route.
+    * `CanLoad` - Prevent asynchronous routing.
+
 #### Pipes
 * Using a pipe symbol `'|'`, bound properties can be formatted using built-in or custom pipes.
 * Pipes can be chained together `{{ comp.price | currency | lowercase }}`
