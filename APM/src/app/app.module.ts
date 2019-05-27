@@ -25,7 +25,7 @@ import { WelcomeComponent } from './home/welcome.component';
     BrowserModule,
     FormsModule,     // Needed for ngModel
     HttpClientModule,
-    RouterModule.forRoot([
+    RouterModule.forRoot([    // Order matters in this array, routing will pick the first match!
       { path: 'products', component: ProductListComponent },
       { path: 'products/:id', component: ProductDetailComponent },
       { path: 'welcome', component: WelcomeComponent },
