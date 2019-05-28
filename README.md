@@ -101,7 +101,8 @@ This is based on the PluralSight course "Angular: Getting Started" by Deborah Ku
     * `npm install -g @angular/cli`
 * Create a new angular project without routing and CSS type styles.
     * `ng new hello-world`
-    
+* Generate components, classes, services, guards, etc.
+    * `ng g c welcome`
 
 
 ## Reference
