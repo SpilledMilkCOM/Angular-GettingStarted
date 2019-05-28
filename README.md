@@ -103,6 +103,9 @@ This is based on the PluralSight course "Angular: Getting Started" by Deborah Ku
     * `ng new hello-world`
 * Generate components, classes, services, guards, etc.
     * `ng g c welcome`
+* Testing using the Karma Test Runner
+    * `ng test`
+    * `ng e2e`
 
 
 ## Reference
