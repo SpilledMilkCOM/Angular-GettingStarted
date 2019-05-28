@@ -106,7 +106,9 @@ This is based on the PluralSight course "Angular: Getting Started" by Deborah Ku
 * Testing using the Karma Test Runner
     * `ng test`
     * `ng e2e`
-
+* Building and deploying (by default the bundles go to the 'dist' folder.)
+    * `ng build`
+    * `ng build --prod` (minifies, uglifies, and hashes file names)
 
 ## Reference
 https://www.typescriptlang.org/play/
