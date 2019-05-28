@@ -17,6 +17,11 @@ import { ProductModule } from './products/product.module';
     BrowserModule,
     HttpClientModule,
     ProductModule,        // The CLI was supposed to add this with the "-m" option, but it didn't
+
+// If there were many modules that define routing then the ORDER WOULD MATTER!
+// Since this is an array the imports processing is done in order and you'd want the
+// Root routes to be defined last so they would overwrite anything defined before.
+
     RouterModule.forRoot([
       { path: 'welcome', component: WelcomeComponent },
       { path: '', redirectTo: 'welcome', pathMatch: 'full' },
