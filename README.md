@@ -96,6 +96,14 @@ This is based on the PluralSight course "Angular: Getting Started" by Deborah Ku
 #### Observable Operator
 * Each item is processed with the 'arrow' function **as** it is emitted.
 
+## Command Line Interface (CLI)
+* Install the CLI globally using the Node Package Manager (npm)
+    * `npm install -g @angular/cli`
+* Create a new angular project without routing and CSS type styles.
+    * `ng new hello-world`
+    
+
+
 ## Reference
 https://www.typescriptlang.org/play/
 
