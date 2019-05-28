@@ -116,3 +116,14 @@ https://www.typescriptlang.org/play/
 Get the latest version of Node Package Manager: `npm install -g npm`
 
 #### [Latest Angular Modules](https://www.npmjs.com/~angular)
+
+#### More [PluralSight](https://pluralsight.com) Courses
+* Angular: First Look
+* Angular CLI
+* Angular Reactive Forms
+* Angular Routing
+* Angular Component Communication
+* Angular Fundamentals
+* Unit Testing in Angular
+
+#### [Angular Documentation](http://angular.io)
