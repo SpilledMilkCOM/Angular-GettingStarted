@@ -103,9 +103,34 @@ This is based on the PluralSight course "Angular: Getting Started" by Deborah Ku
 #### Observable Operator
 * Each item is processed with the 'arrow' function **as** it is emitted.
 
+## Command Line Interface (CLI)
+* Install the CLI globally using the Node Package Manager (npm)
+    * `npm install -g @angular/cli`
+* Create a new angular project without routing and CSS type styles.
+    * `ng new hello-world`
+* Generate components, classes, services, guards, etc.
+    * `ng g c welcome`
+* Testing using the Karma Test Runner
+    * `ng test`
+    * `ng e2e`
+* Building and deploying (by default the bundles go to the 'dist' folder.)
+    * `ng build`
+    * `ng build --prod` (minifies, uglifies, and hashes file names)
+
 ## Reference
 https://www.typescriptlang.org/play/
 
 Get the latest version of Node Package Manager: `npm install -g npm`
 
 #### [Latest Angular Modules](https://www.npmjs.com/~angular)
+
+#### More [PluralSight](https://pluralsight.com) Courses
+* Angular: First Look
+* Angular CLI
+* Angular Reactive Forms
+* Angular Routing
+* Angular Component Communication
+* Angular Fundamentals
+* Unit Testing in Angular
+
+#### [Angular Documentation](http://angular.io)
