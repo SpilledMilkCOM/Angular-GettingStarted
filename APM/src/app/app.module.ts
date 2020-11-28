@@ -19,8 +19,7 @@ import { ProductModule } from './products/product.module';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
-   
+    HttpClientModule,   
     ProductModule,        // The CLI was supposed to add this with the "-m" option, but it didn't
 
 // If there were many modules that define routing then the ORDER WOULD MATTER!
